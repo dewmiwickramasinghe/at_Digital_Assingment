@@ -17,7 +17,7 @@
 /* Hero Section */
 .hero-section {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url("C:/Users/ASUS/OneDrive/Desktop/INTERN/7d2692c302df419cba923b35861b32302ece4d90.jpg") no-repeat center/cover;
+              url("background.jpg") no-repeat center/cover;
   padding: 100px 0;
 }
 .logo {
