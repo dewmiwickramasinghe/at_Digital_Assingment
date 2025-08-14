@@ -1,0 +1,179 @@
+/* === Color Palette from Figma === */
+:root {
+  --primary-color: #4B4DED;
+  --secondary-color: #FF7F50;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --accent-color: #FF7F50;
+  --success-color: #00BFA6;
+  --error-color: #4CAF50;
+}
+
+/* Navbar */
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("C:/Users/ASUS/OneDrive/Desktop/INTERN/7d2692c302df419cba923b35861b32302ece4d90.jpg") no-repeat center/cover;
+  padding: 100px 0;
+}
+.logo {
+  width: 50px;
+  height: auto; /* maintains aspect ratio */
+  vertical-align: middle; /* aligns with text */
+  margin-right: 10px; /* spacing between logo and text */
+}
+/* Buttons */
+.btn-accent {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.btn-accent:hover {
+  background-color: #ff6a35;
+  color: #fff;
+}
+/* Services */
+.service-img {
+  width: 300px;
+  height: 300px;;
+}
+.service-card h4 {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.service-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+}
+.Service{
+  color: var(--primary-color);
+}
+
+/* General FAQ Section */
+.faq-section {
+  padding: 3rem 0;
+  background-color: #f9faff;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 3ch;
+  font-weight: 600;
+  color: #4f46e5; /* Indigo blue */
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+/* Accordion Styles */
+.accordion-item {
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.accordion-button {
+  background-color: #fff;
+  color: #111827; /* dark gray */
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #4f46e5; /* blue when active */
+  background-color: #f3f4f6; /* light gray */
+  font-weight: 600;
+}
+
+.accordion-body {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray text */
+  padding: 1rem;
+  line-height: 1.5;
+}
+.accordion-button::after {
+  background-image: none !important; /* remove Bootstrap arrow */
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4f46e5;
+  margin-left: auto;
+  transition: transform 0.3s ease, content 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "–"; /* minus sign when open */
+}
+
+/* Remove default Bootstrap arrow */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%234f46e5' viewBox='0 0 24 24'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3e%3c/svg%3e");
+  background-size: 1rem;
+  transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+
+/* 1440px - Default large desktop */
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 120px 0;
+  }
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* 1200px - Smaller desktop */
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 90px 0;
+  }
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* 768px - Tablet */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 70px 0;
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .service-card {
+    text-align: center;
+  }
+}
+
+/* 375px - Mobile */
+@media (max-width: 375px) {
+  .hero-section {
+    padding: 50px 0;
+  }
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+  .btn-accent {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .service-icon {
+    font-size: 32px;
+  }
+}
